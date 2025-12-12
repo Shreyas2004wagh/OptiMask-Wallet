@@ -68,7 +68,7 @@
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 1.1rem;
   margin-top: 0.5rem;
   font-weight: 400;
@@ -81,12 +81,12 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 15, 26, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   animation: cardSlideIn 0.5s ease-out backwards;
 }
@@ -136,7 +136,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.98);
 }
 
 .card-header .icon {
@@ -161,7 +161,7 @@
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.75rem;
   padding: 1.5rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
   margin-bottom: 1rem;
   border: 1px solid rgba(102, 126, 234, 0.2);
@@ -209,14 +209,14 @@
 }
 
 .placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   font-style: italic;
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
 
 .placeholder-hint {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
@@ -317,7 +317,7 @@
   gap: 0.5rem;
   margin-bottom: 0.75rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .label-icon {
@@ -327,7 +327,7 @@
 .wallet-selector select {
   width: 100%;
   padding: 0.875rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   color: white;
@@ -365,9 +365,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease;
 }
 
@@ -380,12 +380,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
 }
 
 .info-label strong {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
 }
 
@@ -413,7 +413,7 @@
 
 .balance-placeholder {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
   font-style: italic;
 }
 
@@ -446,8 +446,8 @@
 }
 
 .transaction-form {
-  border: 2px solid rgba(102, 126, 234, 0.3);
-  background: rgba(102, 126, 234, 0.05);
+  border: 2px solid rgba(102, 126, 234, 0.4);
+  background: rgba(102, 126, 234, 0.08);
   animation: slideIn 0.3s ease-out;
 }
 
@@ -476,7 +476,7 @@
   gap: 0.5rem;
   margin-bottom: 0.75rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .input-wrapper {
@@ -486,7 +486,7 @@
 .input-field {
   width: 100%;
   padding: 0.875rem 1rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   color: white;
@@ -503,8 +503,8 @@
 .input-field:focus {
   outline: none;
   border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .loading-spinner {
@@ -675,107 +675,3 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .card {
-    background: rgba(255, 255, 255, 0.9);
-    border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  }
-
-  .card:hover {
-    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.12);
-  }
-
-  .card-header h2 {
-    color: #1a1a1a;
-  }
-
-  .subtitle {
-    color: rgba(0, 0, 0, 0.6);
-  }
-
-  .mnemonic-display {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(102, 126, 234, 0.2);
-  }
-
-  .mnemonic-word {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-    border-color: rgba(102, 126, 234, 0.2);
-    color: #333;
-  }
-
-  .word-text {
-    color: #1a1a1a;
-  }
-
-  .placeholder {
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  .placeholder-hint {
-    color: rgba(0, 0, 0, 0.4);
-  }
-
-  .wallet-selector select,
-  .input-field {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #1a1a1a;
-  }
-
-  .info-row {
-    background: rgba(0, 0, 0, 0.03);
-    border-color: rgba(0, 0, 0, 0.05);
-  }
-
-  .info-label strong {
-    color: #1a1a1a;
-  }
-
-  .address {
-    color: #667eea;
-  }
-
-  .error-message {
-    background: rgba(239, 68, 68, 0.1);
-    color: #dc2626;
-    border-color: rgba(239, 68, 68, 0.3);
-  }
-
-  .success-message {
-    background: rgba(34, 197, 94, 0.1);
-    color: #16a34a;
-    border-color: rgba(34, 197, 94, 0.3);
-  }
-
-  .tx-link {
-    color: #16a34a;
-  }
-
-  .tx-link:hover {
-    color: #15803d;
-  }
-
-  .secondary-button {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.1);
-    color: #1a1a1a;
-  }
-
-  .secondary-button:hover:not(:disabled) {
-    background: rgba(0, 0, 0, 0.08);
-  }
-
-  .copy-button {
-    background: rgba(102, 126, 234, 0.1);
-    color: #667eea;
-    border-color: rgba(102, 126, 234, 0.2);
-  }
-
-  .icon-button {
-    background: rgba(102, 126, 234, 0.1);
-    color: #667eea;
-    border-color: rgba(102, 126, 234, 0.2);
-  }
-}
