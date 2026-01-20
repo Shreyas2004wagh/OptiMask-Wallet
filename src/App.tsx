@@ -28,35 +28,21 @@ function App() {
     }
   };
 
-  // Load mnemonic from localStorage on mount
+  // On first load, clear any previously stored sensitive data from localStorage (migration away from persistence)
   useEffect(() => {
-    const savedMnemonic = localStorage.getItem('optimask_mnemonic');
-    const savedWallets = localStorage.getItem('optimask_wallets');
-    
-    if (savedMnemonic) {
-      setMnemonic(savedMnemonic);
-    }
-    
-    if (savedWallets) {
-      try {
-        setWallets(JSON.parse(savedWallets));
-      } catch (e) {
-        console.error('Failed to load wallets from localStorage', e);
+    try {
+      if (localStorage.getItem('optimask_mnemonic') || localStorage.getItem('optimask_wallets')) {
+        localStorage.removeItem('optimask_mnemonic');
+        localStorage.removeItem('optimask_wallets');
       }
+    } catch (e) {
+      console.error('Failed to clear legacy localStorage data', e);
     }
   }, []);
-
-  // Save wallets to localStorage whenever they change
-  useEffect(() => {
-    if (wallets.length > 0) {
-      localStorage.setItem('optimask_wallets', JSON.stringify(wallets));
-    }
-  }, [wallets]);
 
   const handleGenerateMnemonic = () => {
     const newMnemonic = generateMnemonic();
     setMnemonic(newMnemonic);
-    localStorage.setItem('optimask_mnemonic', newMnemonic);
     setWallets([]);
     setSelectedWalletIndex(-1);
     setBalance('');
