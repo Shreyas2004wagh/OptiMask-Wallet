@@ -40,6 +40,24 @@ function App() {
     }
   }, []);
 
+  const handleLockWallet = () => {
+    // Clear all sensitive data from memory for the current session
+    setMnemonic('');
+    setWallets([]);
+    setSelectedWalletIndex(-1);
+    setBalance('');
+    setShowTransactionForm(false);
+    setRecipientAddress('');
+    setAmount('');
+    setTxHash('');
+    setError('');
+  };
+
+  const handleResetApp = () => {
+    // For now, reset behaves the same as locking since we do not persist secrets
+    handleLockWallet();
+  };
+
   const handleGenerateMnemonic = () => {
     const newMnemonic = generateMnemonic();
     setMnemonic(newMnemonic);
@@ -347,6 +365,37 @@ function App() {
             </div>
           </section>
         )}
+
+        {/* Security Controls */}
+        <section className="card security-card">
+          <div className="card-header">
+            <h2>
+              <span className="icon">🛡️</span>
+              Security Controls
+            </h2>
+          </div>
+          <p className="security-note">
+            Lock or reset the wallet to clear all sensitive data from this session&apos;s memory.
+          </p>
+          <div className="button-group">
+            <button
+              type="button"
+              onClick={handleLockWallet}
+              className="secondary-button"
+            >
+              <span>🔒</span>
+              Lock Wallet
+            </button>
+            <button
+              type="button"
+              onClick={handleResetApp}
+              className="secondary-button"
+            >
+              <span>🧹</span>
+              Reset Session
+            </button>
+          </div>
+        </section>
 
         {/* Error Display */}
         {error && (

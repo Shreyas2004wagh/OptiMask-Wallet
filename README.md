@@ -39,7 +39,7 @@ npm install
 ```
 
 3. Set up environment variables:
-   - Create a `.env` file in the root directory
+   - Create a `.env` file in the root directory (you can use `.env.example` as a template)
    - Add your Alchemy API key to the `.env` file:
    ```
    VITE_ALCHEMY_API_KEY=your_alchemy_api_key_here
@@ -77,9 +77,13 @@ After generating a mnemonic, click "Create New Wallet" to create your first wall
 ⚠️ **Important Security Warnings**:
 - This is a development tool. For production use, implement additional security measures.
 - Never share your mnemonic seed phrase or private keys with anyone.
-- The mnemonic is stored in browser localStorage - clear it if you're on a shared computer.
+- Secrets (mnemonic, private keys) are kept only in memory for the current browser session and are cleared when you refresh the page or use the **Lock Wallet** / **Reset Session** controls.
 - Always verify transaction details before sending.
 - Use test networks (like Sepolia) for testing before using mainnet.
+
+## Supported Networks
+
+By default, OptiMask connects to the **Ethereum mainnet (homestead)** via Alchemy using your `VITE_ALCHEMY_API_KEY`.
 
 ## Project Structure
 
